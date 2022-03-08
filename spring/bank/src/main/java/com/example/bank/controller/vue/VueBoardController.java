@@ -51,4 +51,14 @@ public class VueBoardController {
         service.remove(boardNo);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @PutMapping("/{boardNo}")
+    public ResponseEntity<Board> vueBoardModify(@PathVariable("boardNo") Integer boardNo,
+                                                @RequestBody Board board) {
+        log.info("vueBoardModify()");
+
+        board.setBoardNo(boardNo);
+        service.modify(board);
+        return new ResponseEntity<>(board, HttpStatus.OK);
+    }
 }

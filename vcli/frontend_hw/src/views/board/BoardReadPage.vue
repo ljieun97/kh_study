@@ -4,16 +4,17 @@
         <!--boardRead 컴포넌트-->
         <board-read v-if="board" :board="board"/>
         <p v-else>로딩중......</p>
-        <p>게시물 수정</p>
+        <router-link :to="{ name: 'BoardModifyPage', params: { boardNo } }">
+            게시물 수정
+        </router-link>
         <button @click="onDelete">삭제</button>
-        <router-link :to="{name: 'BoardListPage'}">
+        <router-link :to="{ name: 'BoardListPage' }">
             게시물 보기
         </router-link>
     </div>
 </template>
 
 <script>
-//import axios from 'axios'
 import { mapActions, mapState } from 'vuex'
 import BoardRead from '@/components/board/BoardRead'
 import axios from 'axios'
