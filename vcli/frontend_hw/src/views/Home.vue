@@ -1,6 +1,7 @@
 <template>
     <div class="home">
         <div id="header">
+            <!--라우터의 네임이랑 맞춤-->
             <router-link :to="{name: 'Home'}"
                 class="nav-link"
                 active-class="active">

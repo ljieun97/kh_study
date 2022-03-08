@@ -40,6 +40,7 @@ const routes = [
     components: {
       default: BoardReadPage
     },
+    //BoardReadPage Props으로 boardNo을 받을 수 있어짐
     props: {
       default: true
     }
