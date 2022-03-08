@@ -35,4 +35,20 @@ public class VueBoardController {
         service.register(board);
         return new ResponseEntity<>(board, HttpStatus.OK);
     }
+
+    @GetMapping("/{boardNo}")
+    public ResponseEntity<Board> getVueBoardRead(@PathVariable("boardNo") Integer boardNo) {
+        log.info("getVueBoardRead()");
+
+        Board board = service.read(boardNo);
+        return new ResponseEntity<>(board, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{boardNo}")
+    public ResponseEntity<Void> vueBoardRemove(@PathVariable("boardNo") Integer boardNo) {
+        log.info("vueBoardRemove()");
+
+        service.remove(boardNo);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }
