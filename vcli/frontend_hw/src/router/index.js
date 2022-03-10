@@ -8,6 +8,8 @@ import BoardRegisterPage from '@/views/board/BoardRegisterPage'
 import BoardReadPage from '@/views/board/BoardReadPage'
 import BoardModifyPage from '@/views/board/BoardModifyPage'
 
+import Concave from '@/views/game/Concave'
+
 import Homework from '@/views/homework/Homework'
 import Game from '@/views/homework/Game'
 
@@ -54,6 +56,11 @@ const routes = [
     props: {
       default: true
     }
+  },
+  {
+    path: '/game/concave',
+    name: 'Concave',
+    component: Concave
   },
   {
     path: '/homework',

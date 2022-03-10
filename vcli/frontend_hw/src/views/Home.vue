@@ -7,19 +7,16 @@
                 active-class="active">
                 Home
             </router-link>
-            <router-link :to="{name: 'Test'}"
-                class="nav-link"
-                active-class="active">
+            <router-link :to="{name: 'Test'}">
                 Test
             </router-link>
-            <router-link :to="{name: 'BoardListPage'}"
-                class="nav-link"
-                active-class="active">
+            <router-link :to="{name: 'BoardListPage'}">
                 BoardListPage
             </router-link>
-            <router-link :to="{name: 'Homework'}"
-                class="nav-link"
-                active-class="active">
+            <router-link :to="{name: 'Concave'}">
+                Concave
+            </router-link>
+            <router-link :to="{name: 'Homework'}">
                 homework
             </router-link>
         </div>
