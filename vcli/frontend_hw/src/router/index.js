@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Test from '@/views/Test.vue'
+import HomeView from '../views/HomeView.vue'
+import TestView from '@/views/TestView.vue'
+import RolePlayGame from '@/views/homework/RolePlayGame'
 
 import BoardListPage from '@/views/board/BoardListPage'
 import BoardRegisterPage from '@/views/board/BoardRegisterPage'
@@ -9,22 +10,28 @@ import BoardReadPage from '@/views/board/BoardReadPage'
 import BoardModifyPage from '@/views/board/BoardModifyPage'
 
 import Concave from '@/views/game/Concave'
+import EventBusTestPage from '@/views/eventbus/EventBusTestPage'
 
-import Homework from '@/views/homework/Homework'
-import Game from '@/views/homework/Game'
+import ProductListPage from '@/views/homework/product/ProductListPage'
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'HomeView',
+    component: HomeView
   },
   {
     path: '/test',
-    name: 'Test',
-    component: Test
+    name: 'TestView',
+    component: TestView
+  },
+  {
+    path: '/rolePlayGame',
+    name: 'RolePlayGame',
+    component: RolePlayGame
   },
   {
     path: '/boardList',
@@ -63,14 +70,14 @@ const routes = [
     component: Concave
   },
   {
-    path: '/homework',
-    name: 'Homework',
-    component: Homework
+    path: '/eventBusTestPage',
+    name: 'EventBusTestPage',
+    component: EventBusTestPage
   },
   {
-    path: '/game',
-    name: 'Game',
-    component: Game
+    path: '/productList',
+    name: 'ProductListPage',
+    component: ProductListPage
   }
 ]
 

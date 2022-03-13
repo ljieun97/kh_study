@@ -1,6 +1,7 @@
 import {
     FETCH_BOARD,
-    FETCH_BOARD_LIST
+    FETCH_BOARD_LIST,
+    FETCH_PRODUCT_LIST
 } from './mutation-types'
 
 import axios from 'axios'
@@ -19,6 +20,12 @@ export default {
         return axios.get(`http://localhost:7777/vueBoard/${boardNo}`)
             .then((res) => {
                 commit(FETCH_BOARD, res.data)
+            })
+    },
+    fetchProductList ({commit}) {
+        return axios.get('http://localhost:7777/bank13/list')
+            .then((res) => {
+                commit(FETCH_PRODUCT_LIST, res.date)
             })
     }
 }

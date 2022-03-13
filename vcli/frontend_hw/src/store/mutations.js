@@ -1,6 +1,7 @@
 import {
     FETCH_BOARD,
-    FETCH_BOARD_LIST
+    FETCH_BOARD_LIST,
+    FETCH_PRODUCT_LIST
 } from './mutation-types'
 
 export default {
@@ -9,5 +10,8 @@ export default {
     },
     [FETCH_BOARD] (state, board) {
         state.board = board
+    },
+    [FETCH_PRODUCT_LIST] (state, products) {
+        state.products = products
     }
 }

@@ -12,7 +12,7 @@ import { mapActions, mapState } from 'vuex'
 import BoardModifyForm from '@/components/board/BoardModifyForm'
 
 export default {
-    name: 'BoardModifhPage',
+    name: 'BoardModifyPage',
     components: {
         BoardModifyForm
     },

@@ -1,17 +1,5 @@
 <template>
   <div class="game">
-    <div id="header">
-            <router-link :to="{name: 'Home'}"
-                class="nav-link"
-                active-class="active">
-                Home
-            </router-link>
-            <router-link :to="{name: 'Homework'}"
-                class="nav-link"
-                active-class="active">
-                homework
-            </router-link>
-        </div>
     <h1>Vue RolePlayGame</h1>
 
     <h3>상태</h3>

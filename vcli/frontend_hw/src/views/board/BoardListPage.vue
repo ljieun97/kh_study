@@ -13,8 +13,11 @@
 <script>
 import BoardList from '@/components/board/BoardList.vue'
 import { mapState, mapActions } from 'vuex'
+
+//다른 파일에 있는 내용을 참조할 때
 export default {
     name: 'BoardListPage',
+    //사용할 컴포넌트들, 위치는 template에서 선언
     components: {
         BoardList
     },
