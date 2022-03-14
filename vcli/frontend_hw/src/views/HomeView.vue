@@ -23,8 +23,8 @@
               <router-link style="text-decoration: none;" :to="{name: 'RolePlayGame'}">
                   &nbsp;RolePlayGame&nbsp;
               </router-link>
-              <router-link style="text-decoration: none;" :to="{name: 'ProductListPage'}">
-                  &nbsp;ProductListPage&nbsp;
+              <router-link style="text-decoration: none;" :to="{name: 'ProductBoardListPage'}">
+                  &nbsp;상품게시판&nbsp;
               </router-link>
             </p>
         </div>

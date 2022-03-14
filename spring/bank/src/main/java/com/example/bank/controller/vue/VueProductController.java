@@ -8,10 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,13 +19,47 @@ import java.util.List;
 public class VueProductController {
 
     @Autowired
-    private ProductBoardService service;
+    private ProductBoardService productBoardService;
 
     @ResponseBody
     @GetMapping("/list")
-    public ResponseEntity<List<ProductBoard>> getVueProductList() {
-        log.info("getVueProductList()");
+    public ResponseEntity<List<ProductBoard>> listProduct() {
+        log.info("listProduct()");
 
-        return new ResponseEntity<>(service.list(), HttpStatus.OK);
+        return new ResponseEntity<>(productBoardService.list(), HttpStatus.OK);
+    }
+
+    @PostMapping("/register")
+    public ResponseEntity<ProductBoard> registerProduct(@RequestBody ProductBoard productBoard) {
+        log.info("registerProduct()");
+
+        productBoardService.register(productBoard);
+        return new ResponseEntity<>(productBoard, HttpStatus.OK);
+    }
+
+    @GetMapping("/{productNo}")
+    public ResponseEntity<ProductBoard> readProduct(@PathVariable("productNo") Integer productNo) {
+        log.info("readProduct()");
+
+        ProductBoard productBoard = productBoardService.read(productNo);
+        return new ResponseEntity<>(productBoard, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{productNo}")
+    public ResponseEntity<Void> removeProduct(@PathVariable("productNo") Integer productNo) {
+        log.info("removeProduct()");
+
+        productBoardService.remove(productNo);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PutMapping("/{productNo}")
+    public ResponseEntity<ProductBoard> modifyProduct(@PathVariable("productNo") Integer productNo,
+                                                @RequestBody ProductBoard productBoard) {
+        log.info("modifyProduct()");
+
+        productBoard.setProductNo(productNo);
+        productBoardService.modify(productBoard);
+        return new ResponseEntity<>(productBoard, HttpStatus.OK);
     }
 }
