@@ -19,6 +19,9 @@
             <router-link style="text-decoration: none;" :to="{ name: 'EventBusTestPage' }">
                 &nbsp;Eventbus&nbsp;
             </router-link>
+              <router-link style="text-decoration: none;" :to="{name: 'VuetifyTestPage'}">
+                  &nbsp;VuetifyUI&nbsp;
+              </router-link>
             <p>
               <router-link style="text-decoration: none;" :to="{name: 'RolePlayGame'}">
                   &nbsp;RolePlayGame&nbsp;

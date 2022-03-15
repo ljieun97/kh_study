@@ -17,6 +17,7 @@ import ProductBoardRegisterPage from '@/views/productBoard/ProductBoardRegisterP
 import ProductBoardReadPage from '@/views/productBoard/ProductBoardReadPage.vue'
 import ProductBoardModifyPage from '@/views/productBoard/ProductBoardModifyPage.vue'
 
+import VuetifyTestPage from '@/views/ui/VuetifyTestPage'
 
 Vue.use(VueRouter)
 
@@ -106,6 +107,11 @@ const routes = [
     props: {
       default: true
     }
+  },
+  {
+    path: '/veutifyTest',
+    name: 'VuetifyTestPage',
+    component: VuetifyTestPage
   }
 ]
 
