@@ -207,6 +207,7 @@ export default {
                 { boardNo: 15, title: '호야호야', writer: '어이크후', content: '어이크후' },
             ],
             nav_drawer: false,
+            loginDialog: false,
             dialog: false,
             service: {
                 name: '7박 8일 여행 코스!'
