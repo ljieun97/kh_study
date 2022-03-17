@@ -31,6 +31,12 @@
               <router-link style="text-decoration: none;" :to="{name: 'AwesomeSwiperTestPage'}">
                   &nbsp;AwesomeSwiper&nbsp;
               </router-link>
+              <router-link style="text-decoration: none;" :to="{name: 'ImageGalleryTestPage'}">
+                  &nbsp;ImageGallery&nbsp;
+              </router-link>
+              <router-link style="text-decoration: none;" :to="{name: 'CalendarTestPage'}">
+                  &nbsp;Calendar&nbsp;
+              </router-link>
             <p>
               <router-link style="text-decoration: none;" :to="{name: 'RolePlayGame'}">
                   &nbsp;RolePlayGame&nbsp;
