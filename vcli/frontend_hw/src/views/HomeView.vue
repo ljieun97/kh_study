@@ -37,7 +37,11 @@
               <router-link style="text-decoration: none;" :to="{name: 'CalendarTestPage'}">
                   &nbsp;Calendar&nbsp;
               </router-link>
+              <router-link style="text-decoration: none;" :to="{name: 'FileUploadPage'}">
+                  &nbsp;FileUpload&nbsp;
+              </router-link>
             <p>
+              Homework:
               <router-link style="text-decoration: none;" :to="{name: 'RolePlayGame'}">
                   &nbsp;RolePlayGame&nbsp;
               </router-link>

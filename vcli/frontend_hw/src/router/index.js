@@ -24,6 +24,8 @@ import AwesomeSwiperTestPage from '@/views/ui/AwesomeSwiperTestPage'
 import ImageGalleryTestPage from '@/views/ui/ImageGalleryTestPage'
 import CalendarTestPage from '@/views/ui/CalendarTestPage'
 
+import FileUploadPage from '@/views/fileUpload/FileUploadPage'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -142,6 +144,11 @@ const routes = [
     path: '/calendarTest',
     name: 'CalendarTestPage',
     component: CalendarTestPage
+  },
+  {
+    path: '/fileUpload',
+    name: 'FileUploadPage',
+    component: FileUploadPage
   }
 ]
 
