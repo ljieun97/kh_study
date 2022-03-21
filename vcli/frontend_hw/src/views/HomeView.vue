@@ -19,35 +19,41 @@
             <router-link style="text-decoration: none;" :to="{ name: 'EventBusTestPage' }">
                 &nbsp;Eventbus&nbsp;
             </router-link>
-              <router-link style="text-decoration: none;" :to="{name: 'VuetifyTestPage'}">
-                  &nbsp;VuetifyUI&nbsp;
-              </router-link>
-              <router-link style="text-decoration: none;" :to="{name: 'VuetifyImageTestPage'}">
-                  &nbsp;VuetifyImage&nbsp;
-              </router-link>
-              <router-link style="text-decoration: none;" :to="{name: 'CoverflowTestPage'}">
-                  &nbsp;Coverflow&nbsp;
-              </router-link>
-              <router-link style="text-decoration: none;" :to="{name: 'AwesomeSwiperTestPage'}">
-                  &nbsp;AwesomeSwiper&nbsp;
-              </router-link>
-              <router-link style="text-decoration: none;" :to="{name: 'ImageGalleryTestPage'}">
-                  &nbsp;ImageGallery&nbsp;
-              </router-link>
-              <router-link style="text-decoration: none;" :to="{name: 'CalendarTestPage'}">
-                  &nbsp;Calendar&nbsp;
-              </router-link>
-              <router-link style="text-decoration: none;" :to="{name: 'FileUploadPage'}">
-                  &nbsp;FileUpload&nbsp;
-              </router-link>
+            <router-link style="text-decoration: none;" :to="{name: 'VuetifyTestPage'}">
+                &nbsp;VuetifyUI&nbsp;
+            </router-link>
+            <router-link style="text-decoration: none;" :to="{name: 'VuetifyImageTestPage'}">
+                &nbsp;VuetifyImage&nbsp;
+            </router-link>
+            <router-link style="text-decoration: none;" :to="{name: 'CoverflowTestPage'}">
+                &nbsp;Coverflow&nbsp;
+            </router-link>
+            <router-link style="text-decoration: none;" :to="{name: 'AwesomeSwiperTestPage'}">
+                &nbsp;AwesomeSwiper&nbsp;
+            </router-link>
+            <router-link style="text-decoration: none;" :to="{name: 'ImageGalleryTestPage'}">
+                &nbsp;ImageGallery&nbsp;
+            </router-link>
+            <router-link style="text-decoration: none;" :to="{name: 'CalendarTestPage'}">
+                &nbsp;Calendar&nbsp;
+            </router-link>
+            <router-link style="text-decoration: none;" :to="{name: 'FileUploadPage'}">
+                &nbsp;FileUpload&nbsp;
+            </router-link>
+            <router-link style="text-decoration: none;" :to="{name: 'VuetifyMemberRegisterPage'}">
+                &nbsp;VuetifyMemberRegisterPage&nbsp;
+            </router-link>
+            <router-link style="text-decoration: none;" :to="{ name: 'VuetifyMemberJoinColumnTestPage' }">
+                &nbsp;Vuetify Member Join Column Test&nbsp;
+            </router-link>
             <p>
-              Homework:
-              <router-link style="text-decoration: none;" :to="{name: 'RolePlayGame'}">
-                  &nbsp;RolePlayGame&nbsp;
-              </router-link>
-              <router-link style="text-decoration: none;" :to="{name: 'ProductBoardListPage'}">
-                  &nbsp;상품게시판&nbsp;
-              </router-link>
+                Homework:
+                <router-link style="text-decoration: none;" :to="{name: 'RolePlayGame'}">
+                    &nbsp;RolePlayGame&nbsp;
+                </router-link>
+                <router-link style="text-decoration: none;" :to="{name: 'ProductBoardListPage'}">
+                    &nbsp;상품게시판&nbsp;
+                </router-link>
             </p>
         </div>
         <h1>Vue 홈 페이지</h1>

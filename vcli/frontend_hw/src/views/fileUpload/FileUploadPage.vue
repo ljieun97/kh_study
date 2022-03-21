@@ -16,7 +16,7 @@
 <script>
 import axios from 'axios'
 export default {
-    name: 'FileUploadPage',
+    name: 'VueFileUploadPage',
     data () {
         return {
             files: '',
@@ -38,12 +38,11 @@ export default {
                 }
             })
             .then (res => {
-                this.response = res.data
+                alert('처리 결과: ' + res.data)
             })
             .catch (res => {
-                this.response = res.message
+                alert('처리 결과: ' + res.message)
             })
-            alert('처리 결과: '+ this.response)
         }
     }
 }
