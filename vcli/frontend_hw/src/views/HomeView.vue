@@ -20,7 +20,7 @@
                 &nbsp;Eventbus&nbsp;
             </router-link>
             <router-link style="text-decoration: none;" :to="{name: 'VuetifyTestPage'}">
-                &nbsp;VuetifyUI&nbsp;
+                &nbsp;VuetifyUITest&nbsp;
             </router-link>
             <router-link style="text-decoration: none;" :to="{name: 'VuetifyImageTestPage'}">
                 &nbsp;VuetifyImage&nbsp;
@@ -45,6 +45,9 @@
             </router-link>
             <router-link style="text-decoration: none;" :to="{ name: 'VuetifyMemberJoinColumnTestPage' }">
                 &nbsp;Vuetify Member Join Column Test&nbsp;
+            </router-link>
+            <router-link style="text-decoration: none;" :to="{ name: 'LoginTestPage' }">
+                &nbsp;LoginTestPage&nbsp;
             </router-link>
             <p>
                 Homework:

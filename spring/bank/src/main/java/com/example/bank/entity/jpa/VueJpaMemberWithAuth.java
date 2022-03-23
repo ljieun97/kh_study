@@ -1,6 +1,7 @@
 package com.example.bank.entity.jpa;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -11,6 +12,7 @@ import java.util.List;
 
 @Data
 @Entity
+@NoArgsConstructor
 //테이블 이름은 자동으로 클래스 이름으로 생성되는데 너무 기니까 지정해줌
 @Table(name = "jpa_member")
 public class VueJpaMemberWithAuth {
@@ -22,7 +24,7 @@ public class VueJpaMemberWithAuth {
     @Column(length = 32, nullable = false)
     private String userId;
 
-    @Column(length = 32, nullable = false)
+    @Column(length = 128, nullable = false)
     private String password;
 
     @CreationTimestamp

@@ -27,6 +27,7 @@ import FileUploadPage from '@/views/fileUpload/FileUploadPage'
 
 import VuetifyMemberRegisterPage from '@/views/jpaMember/VuetifyMemberRegisterPage'
 import VuetifyMemberJoinColumnTestPage from '@/views/jpaMember/VuetifyMemberJoinColumnTestPage.vue'
+import LoginTestPage from '@/views/jpaMember/LoginTestPage'
 
 Vue.use(VueRouter)
 
@@ -162,6 +163,13 @@ const routes = [
     name: 'VuetifyMemberJoinColumnTestPage',
     components: {
       default: VuetifyMemberJoinColumnTestPage
+    }
+  },
+  {
+    path: '/loginTest',
+    name: 'LoginTestPage',
+    components: {
+      default: LoginTestPage
     }
   }
 ]

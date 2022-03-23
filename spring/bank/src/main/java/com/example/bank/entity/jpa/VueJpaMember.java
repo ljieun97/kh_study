@@ -26,5 +26,4 @@ public class VueJpaMember {
 
     @UpdateTimestamp
     private Date lastModifiedDate;
-
 }
