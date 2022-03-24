@@ -46,10 +46,11 @@ public class VueJpaMemberWithAuth {
         if (authList == null) {
             authList = new ArrayList<VueJpaMemberAuth>();
         }
+
         authList.add(auth);
     }
 
-    public void clearAuthList() {
+    public void clearAuthList () {
         authList.clear();
     }
 }

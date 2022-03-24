@@ -24,7 +24,7 @@ public class VueJpaMemberAuth {
     @Column(length = 64, nullable = false)
     private String auth;
 
-   @CreationTimestamp
+    @CreationTimestamp
     private Date regDate;
 
     @UpdateTimestamp
@@ -33,5 +33,4 @@ public class VueJpaMemberAuth {
     public VueJpaMemberAuth (String auth) {
         this.auth = auth;
     }
-
 }

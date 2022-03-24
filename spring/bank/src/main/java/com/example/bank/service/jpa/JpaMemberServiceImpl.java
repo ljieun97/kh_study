@@ -30,13 +30,15 @@ public class JpaMemberServiceImpl implements JpaMemberService{
     @Override
     public void register(MemberRequest memberRequest) {
         //개인정보(비밀번호) 암호화
-        String encodePassword = passwordEncoder.encode(memberRequest.getPw());
-        memberRequest.setPw(encodePassword);
+        String encodedPassword = passwordEncoder.encode(memberRequest.getPw());
+        memberRequest.setPw(encodedPassword);
 
         VueJpaMemberAuth authEntity = new VueJpaMemberAuth(memberRequest.getAuth());
-        VueJpaMemberWithAuth memberEntity = new VueJpaMemberWithAuth(memberRequest.getId(), memberRequest.getPw());
+        VueJpaMemberWithAuth memberEntity = new VueJpaMemberWithAuth(
+                memberRequest.getId(), memberRequest.getPw());
 
         memberEntity.addAuth(authEntity);
+
         memberRepository.save(memberEntity);
     }
 
@@ -45,7 +47,7 @@ public class JpaMemberServiceImpl implements JpaMemberService{
         //gitId가 레퍼지토리에 존재하는지 확인해서 정보를 maybe에 저장, 없으면 null
         Optional<VueJpaMemberWithAuth> maybeMember = memberRepository.findByUserId(memberRequest.getId());
 
-        if(maybeMember == null) {
+        if (maybeMember.equals(Optional.empty())) {
             log.info("이런 사람 없다!");
             return null;
         }
@@ -55,11 +57,12 @@ public class JpaMemberServiceImpl implements JpaMemberService{
 
         //사용자가 입력한 비밀번호를 암호화하여 db에 저장된 암호와 비교
         if (!passwordEncoder.matches(memberRequest.getPw(), loginMember.getPassword())) {
-            log.info("비밀번호를 잘 못 입력했습니다!");
+            log.info("비밀번호를 잘못 입력했습니다!");
             return null;
         }
-        
-        Optional<VueJpaMemberAuth> maybeMemberAuth = memberAuthRepository.findByMemberNo(loginMember.getMemberNo());
+
+        Optional<VueJpaMemberAuth> maybeMemberAuth =
+                memberAuthRepository.findByMemberNo(loginMember.getMemberNo());
 
         if (maybeMemberAuth == null) {
             log.info("auth 없음");
@@ -67,7 +70,10 @@ public class JpaMemberServiceImpl implements JpaMemberService{
         }
 
         VueJpaMemberAuth memberAuth = maybeMemberAuth.get();
-        MemberRequest response = new MemberRequest(memberRequest.getId(), null, memberAuth.getAuth());
+        MemberRequest response = new MemberRequest(
+                memberRequest.getId(),
+                null,
+                memberAuth.getAuth());
 
         return response;
     }
