@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 @Slf4j
-// Contorlloer - 실제 html로 페이지를 넘겨줘야할 경우 활용
+// Contorlloer - 실제 html로 페이지를 넘겨줘야할 경우(Url핸들링) 활용
 //               몇개의 데이터 전송이 필요할때 ResponseBody를 사용
 // RestContoroller - 데이터 전송이 많은 경우 활용
 //                   ResponseBody가 없어도 json 처리가능

@@ -47,7 +47,10 @@
                 &nbsp;Vuetify Member Join Column Test&nbsp;
             </router-link>
             <router-link style="text-decoration: none;" :to="{ name: 'LoginTestPage' }">
-                &nbsp;LoginTestPage&nbsp;
+                &nbsp;LoginTest&nbsp;
+            </router-link>
+            <router-link style="text-decoration: none;" :to="{ name: 'JpaBoardListPage' }">
+                &nbsp;JpaBoardList&nbsp;
             </router-link>
             <p>
                 Homework:

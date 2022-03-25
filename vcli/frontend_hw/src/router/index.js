@@ -29,6 +29,11 @@ import VuetifyMemberRegisterPage from '@/views/jpaMember/VuetifyMemberRegisterPa
 import VuetifyMemberJoinColumnTestPage from '@/views/jpaMember/VuetifyMemberJoinColumnTestPage.vue'
 import LoginTestPage from '@/views/jpaMember/LoginTestPage'
 
+import JpaBoardListPage from '@/views/jpaBoard/JpaBoardListPage'
+import JpaBoardRegisterPage from '@/views/jpaBoard/JpaBoardRegisterPage'
+import JpaBoardReadPage from '@/views/jpaBoard/JpaBoardReadPage'
+import JpaBoardModifyPage from '@/views/jpaBoard/JpaBoardModifyPage'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -170,6 +175,36 @@ const routes = [
     name: 'LoginTestPage',
     components: {
       default: LoginTestPage
+    }
+  },
+  {
+    path: '/jpaBoardList',
+    name: 'JpaBoardListPage',
+    component: JpaBoardListPage
+  },
+  {
+    path: '/jpaBoardRegister',
+    name: 'JpaBoardRegisterPage',
+    component: JpaBoardRegisterPage
+  },
+  {
+    path: '/jpaBoardRead/:boardNo',
+    name: 'JpaBoardReadPage',
+    components: {
+      default: JpaBoardReadPage
+    },
+    props: {
+      default: true
+    }
+  },
+  {
+    path: '/jpaBoardModify/:boardNo',
+    name: 'JpaBoardModifyPage',
+    components: {
+      default: JpaBoardModifyPage
+    },
+    props: {
+      default: true
     }
   }
 ]
