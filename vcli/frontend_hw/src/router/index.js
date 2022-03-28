@@ -28,6 +28,7 @@ import FileUploadPage from '@/views/fileUpload/FileUploadPage'
 import VuetifyMemberRegisterPage from '@/views/jpaMember/VuetifyMemberRegisterPage'
 import VuetifyMemberJoinColumnTestPage from '@/views/jpaMember/VuetifyMemberJoinColumnTestPage.vue'
 import LoginTestPage from '@/views/jpaMember/LoginTestPage'
+import JpaMemberAuthTestPage from '@/views/jpaMember/JpaMemberAuthTestPage'
 
 import JpaBoardListPage from '@/views/jpaBoard/JpaBoardListPage'
 import JpaBoardRegisterPage from '@/views/jpaBoard/JpaBoardRegisterPage'
@@ -206,7 +207,17 @@ const routes = [
     props: {
       default: true
     }
-  }
+  },
+  {
+    path: '/jpaMemberAuthTest',
+    name: 'JpaMemberAuthTestPage',
+    components: {
+      default: JpaMemberAuthTestPage
+    },
+    props: {
+      default: true
+    }
+  },
 ]
 
 const router = new VueRouter({

@@ -6,21 +6,25 @@
 
     <vuetify-member-join-column-test-form @submit="onSubmit"/>
 
+    <!-- 사업자 권한을 가진 사람들만 뽑아보자! -->
+    <look-business-member-form/>
   </div>
 </template>
 
 <script>
 import VuetifyMemberJoinColumnTestForm from '@/components/jpaMember/VuetifyMemberJoinColumnTestForm.vue'
+import LookBusinessMemberForm from '@/components/jpaMember/LookBusinessMemberForm.vue'
 import axios from 'axios'
 export default {
-  name: "VuetifyMemberJoinColumnTestPage",
+  name: "JpaMemberAuthTestPage",
   components: {
-    VuetifyMemberJoinColumnTestForm
+    VuetifyMemberJoinColumnTestForm,
+    LookBusinessMemberForm
   },
   methods: {
     onSubmit (payload) {
       const { id, pw, auth } = payload
-      axios.post('http://localhost:7777/vueJpaMemberAuth/register', { id, pw, auth })
+      axios.post('http://localhost:7777/jpaMember/register', { id, pw, auth })
         .then(res => {
           alert('등록 성공! - ' + res)
         })
