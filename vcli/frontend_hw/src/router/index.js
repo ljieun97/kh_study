@@ -35,6 +35,8 @@ import JpaBoardRegisterPage from '@/views/jpaBoard/JpaBoardRegisterPage'
 import JpaBoardReadPage from '@/views/jpaBoard/JpaBoardReadPage'
 import JpaBoardModifyPage from '@/views/jpaBoard/JpaBoardModifyPage'
 
+import DaumNewsCrawlerPage from '@/views/crawl/DaumNewsCrawlerPage'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -213,6 +215,16 @@ const routes = [
     name: 'JpaMemberAuthTestPage',
     components: {
       default: JpaMemberAuthTestPage
+    },
+    props: {
+      default: true
+    }
+  },
+  {
+    path: '/daumNewsCrawl',
+    name: 'DaumNewsCrawlerPage',
+    components: {
+      default: DaumNewsCrawlerPage
     },
     props: {
       default: true

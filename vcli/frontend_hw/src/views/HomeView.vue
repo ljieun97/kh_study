@@ -55,6 +55,10 @@
             <router-link style="text-decoration: none;" :to="{ name: 'JpaMemberAuthTestPage' }">
                 &nbsp;BusinessMemberCheck&nbsp;
             </router-link>
+            <router-link style="text-decoration: none;" :to="{ name: 'DaumNewsCrawlerPage' }">
+                &nbsp;DaumNewsCrawlerPage&nbsp;
+            </router-link>
+            
             <p>
                 Homework:
                 <router-link style="text-decoration: none;" :to="{name: 'RolePlayGame'}">
