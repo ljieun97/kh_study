@@ -51,7 +51,6 @@ export default {
                 .catch(()=> {
                     alert('삭제실패 문제발생')
                 })
-            
         }
     }
 }
